@@ -1,0 +1,16 @@
+
+# dependencies
+/target
+/back-end/target
+/back-end/public/images/screenshots
+/app-front-end/target
+.idea/*
+/shared/.js
+/shared/.jvm
+/codecs/.jvm
+/project/target
+/front-end-shared/target
+/project/project/target
+/login-front-end/target
+/codecs/target
+/mongo-data

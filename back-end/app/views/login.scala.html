@@ -1,0 +1,22 @@
+@(title: String)
+<!DOCTYPE html>
+<html>
+    <head>
+        @headers(title)
+        <link type="text/css" media="screen,projection" rel="stylesheet" href="@routes.Assets.versioned("styles/login.css")">
+    </head>
+    @scalajs.html.scripts("login-front-end", routes.Assets.versioned(_).toString, name => getClass.getResource(s"/public/$name") != null)
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="section"></div>
+                <main id="App">
+                </main>
+            </div>
+        </div>
+        @footer()
+    </body>
+</html>
+
+
+

@@ -1,0 +1,16 @@
+@(title: String)
+<!DOCTYPE html>
+<html>
+    <head>
+        @headers(title)
+        <link type="text/css" media="screen,projection" rel="stylesheet" href="@routes.Assets.versioned("styles/main.css")">
+    </head>
+    @scalajs.html.scripts("app-front-end", routes.Assets.versioned(_).toString, name => getClass.getResource(s"/public/$name") != null)
+    <body>
+      <div id="App"></div>
+      @footer()
+    </body>
+</html>
+
+
+

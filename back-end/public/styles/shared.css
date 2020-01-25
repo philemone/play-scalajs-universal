@@ -1,0 +1,38 @@
+#App {
+    min-height: 98vh;
+}
+
+.tabs .tab a{
+    color: #263238; //#263238 blue-grey darken-4
+}
+
+.tabs .tab a:hover,.tabs .tab a.active {
+	background-color:transparent;
+	color: #263238;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+	background-color:rgba(225,179,0,0.1);
+	color: #263238;
+}
+
+.tabs .tab.disabled a,.tabs .tab.disabled a:hover {
+	color:rgba(102,147,153,0.7);
+}
+.tabs .indicator {
+	background-color: #263238;
+}
+
+.tabs-content {
+    height: 80vh !important;
+}
+
+
+
+table#hoverableSelectors > tbody > tr:hover {
+  background-color:rgba(225,179,0,0.2) !important;
+}
+
+li.active > div.collapsible-header{
+  background-color:rgba(225,179,0,0.2) !important;
+}

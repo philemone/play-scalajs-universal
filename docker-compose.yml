@@ -1,0 +1,33 @@
+version: '3.3'
+services:
+  mongodb:
+    image: mongo
+    container_name: "mongodb"
+    restart: always
+    volumes:
+      - ./mongo-data/db:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    ports:
+        - 27017:27017
+
+  application:
+    build: .
+    container_name: "application"
+    tty: true
+    restart: always
+    entrypoint: "sbt"
+    working_dir: /opt/application/src
+    volumes:
+      - .:/opt/application/src
+    ports:
+      - "9000:9000"
+    environment:
+      - HOME=$HOME
+      - USER=$USER
+    command: "run"
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+
+
