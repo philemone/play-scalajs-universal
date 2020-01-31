@@ -1,9 +1,7 @@
-## Uniwersalny projekt aplikacji webowej z wykorzystaniem języka SCALA.
+## Universal Play+Scala.js framework - For you to create web application!
 
-Wymagane jest posiadanie narzędzie `docker` oraz `docker-compose`.
+To run, just type `docker-compose up`.
 
-Projekt testowany na `Ubuntu 16.04`
+I do have documentation, hope to publish it on git soon.
 
-Projekt *nie* był testowany na systemach `Windows`.
 
-By uruchomić projekt należy wykonać: `docker-compose up` w folderze z projektem.
