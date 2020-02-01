@@ -7,6 +7,10 @@ db.createUser(
                     role: "readWrite",
                     db: "appDatabase"
                 }
+                {
+                    role: "readWrite",
+                    db: "users"
+                }
             ]
         }
 );
