@@ -2,6 +2,4 @@
 
 To run app: `docker-compose up`.
 
-I do have documentation, hope to publish it on git soon.
-
-
+I do have documentation, hope to publish it soon.
