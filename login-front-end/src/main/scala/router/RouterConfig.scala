@@ -14,7 +14,7 @@ object RouterConfiguration {
       | staticRoute("login#signup", SignUpPage) ~> renderR(SignUpForm(_))
       | staticRoute("#", RedirectMain) ~> redirectToPath("")(Redirect.Force)
     ).notFound(redirectToPage(SignInPage)(Redirect.Push))
-     .setTitle(p => s"${p.name} | Gamma WM")
+     .setTitle(p => s"${p.name} | PawsCode")
   }
 
 }

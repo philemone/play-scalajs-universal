@@ -89,13 +89,7 @@ object SignUpForm {
           <.div(^.className:="col s12 m6 offset-m3 l4 offset-l4",
             <.div(^.className:="card center-align mg",
               <.div(^.className:="card-content",
-                <.div(
-                  ^.className:="section",
-                  <.div(
-                    ^.className:="card-image",
-                    <.img(^.src:="assets/images/logoFlat.png", ^.padding:="2vh"),
-                  )
-                ),
+                BrandLogo(),
                 <.div(^.padding:="1vh"),
                 s.errorMsg.whenDefined(msg => <.div(^.className:="red-text ", msg)),
                 <.div(
@@ -133,7 +127,7 @@ object SignUpForm {
                   <.div(^.className:=s"determinate black ${passwordStrengthInfo.color}", ^.width:=passwordStrengthInfo.progress),
                 ),
                   <.button(
-                  ^.className:="btn amber lighten-1 black-text waves-effect waves",
+                  ^.className:="btn cyan accent-4 white-text waves-effect waves",
                   ^.`type`:="submit",
                   "Sign Up",
                   <.i(^.className:="material-icons right", "send"))
@@ -148,7 +142,7 @@ object SignUpForm {
             <.div(^.className:="card-action",
                 <.button(
                   p.router.setOnClick(SignInPage),
-                  ^.className:="btn amber lighten-1 black-text waves-effect waves", "Sign in", <.i(^.className:="material-icons right", "star")))
+                  ^.className:="btn cyan accent-4 white-text waves-effect waves", "Sign in", <.i(^.className:="material-icons right", "star")))
             )
         )
       )

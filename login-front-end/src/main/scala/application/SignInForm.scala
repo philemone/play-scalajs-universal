@@ -43,18 +43,12 @@ object SignInForm extends LogSupport {
     def render(p: Props, s: State): VdomElement = {
         <.div(^.className:="row",
           <.form(
-            ^.paddingTop:="7vh",
+            ^.paddingTop:="5vh",
             ^.onSubmit ==> signIn(p, s),
               <.div(^.className:="col s12 m6 offset-m3 l4 offset-l4",
                 <.div(^.className:="card center-align mg",
                   <.div(^.className:="card-content",
-                    <.div(
-                      ^.className:="section",
-                      <.div(
-                        ^.className:="card-image",
-                        <.img(^.src:="assets/images/logoFlat.png", ^.padding:="2vh"),
-                      )
-                    ),
+                    BrandLogo(),
                     <.div(^.padding:="1vh"),
                     s.errorMsg.whenDefined(msg => <.div(^.className:="red-text ", msg)),
                     <.div(
@@ -73,7 +67,7 @@ object SignInForm extends LogSupport {
                     PasswordField(s.password, onPasswordChange(s)),
 
                   <.button(
-                    ^.className:="btn amber lighten-1 black-text waves-effect waves",
+                    ^.className:="btn cyan accent-4 white-text waves-effect waves",
                     ^.`type`:="submit",
                     "Sign In",
                     <.i(^.className:="material-icons right", "send"))
@@ -88,7 +82,7 @@ object SignInForm extends LogSupport {
             <.div(^.className:="card-action",
                 <.button(
                   p.router.setOnClick(SignUpPage),
-                  ^.className:="btn amber lighten-1 black-text waves-effect waves", "Sign up", <.i(^.className:="material-icons right", "star")))
+                  ^.className:="btn cyan accent-4 white-text waves-effect waves", "Sign up", <.i(^.className:="material-icons right", "star")))
           ))
         )
     }

@@ -18,7 +18,7 @@ object RouterConfiguration {
       | staticRoute("#AccountSetting",  AccountSettingPage)  ~> render(UserAccountSettingPanel())
       | staticRoute("#RedirectLogin",  RedirectLoginPage) ~> redirectToPath("login")(Redirect.Force)
       ) .notFound(_ => redirectToPage(AmazingPage)(Redirect.Force))
-      .setTitle(p => s"${p.name} | Gamma WM").renderWith(layout)
+      .setTitle(p => s"${p.name} | PawsCode").renderWith(layout)
   }
 
   def layout(routerCtl: RouterCtl[Pages], resolution: Resolution[Pages]) = {

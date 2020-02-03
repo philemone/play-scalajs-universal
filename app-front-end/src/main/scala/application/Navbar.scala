@@ -7,7 +7,7 @@ import japgolly.scalajs.react.vdom.html_<^._
 object Navbar {
 
     def render: VdomElement = {
-        <.div(^.className:="nav-wrapper amber darken-1",
+        <.div(^.className:="nav-wrapper cyan accent-4",
           <.div(^.className:="row",
             <.div(^.className:="cols s12",
               <.a(^.href:="#", Attr("data-target"):="leftSidenav", ^.className:="left sidenav-trigger hide-on-medium-and-up", <.i(^.className:="material-icons", "menu")),
